@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: JetMonoVar;
+    src: url("/fonts/JetBrainsMono-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: JetMonoItal;
+    src: url("/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf");
+}
+
+:root {
+    --value: 1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "JetMonoVar", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+body {
+    background-color: #0f0f15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="range"] {
+    appearance: none;
+    height: 8px;
+    background: linear-gradient(
+        to right,
+        #a4ffaf 0%,
+        #a4ffaf var(--value),
+        #18171f var(--value),
+        #18171f 100%
+    );
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 14px;
+    background-color: #e6e5ea;
+}
+
